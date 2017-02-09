@@ -25,7 +25,8 @@ app.get('/new/*', (req, res) => {
             long_url : url,
             short_url : "https://" + req.hostname + "/" + key
         };
-        res.render('response', {long : respond.long_url, short : respond.short_url});
+        
+        res.render('response', {long : respond.long_url, short : respond.short_url });
     }
     else{
         res.end('This is not a valid url :(.');
@@ -43,7 +44,7 @@ app.get('/:key', (req, res) => {
    }
 });
 
-app.listen(8080, () => {
+app.listen(process.env.PORT || 8080, () => {
     console.log('Server running correctly!');
 });
 

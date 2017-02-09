@@ -1,1 +1,22 @@
-include index.html
+doctype html
+html(lang="en")
+  meta(charset='utf-8')
+  head
+    title URL-Shortener
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+  body
+  .container 
+    h1 URL Shortener Microservice by Brailor
+    h3 User stories:
+    ul
+      li I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
+      li If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.
+      li When I visit that shortened URL, it will redirect me to my original link.
+    h3 Example usage:<br>
+      code http://hostname/new/https://www.google.com
+    h3 Example output:<br>
+      code http://hostname/3Yr </code> Which will direct to the desired site.
+      
+      
+    
